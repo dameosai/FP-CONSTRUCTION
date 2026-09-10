@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+:root {
+  --font-display: var(--font-inter-display), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Color System */
+  --primary: #000000;
+  --ink: #000000;
+  --on-primary: #ffffff;
+  --canvas-night: #000000;
+  --canvas-night-elevated: #0a0a0a;
+  --canvas-light: #ffffff;
+  --canvas-cream: #fbfbf5;
+  --surface-elevated-dark: #1e2c31;
+  --shade-30: #d4d4d8;
+  --shade-40: #a1a1aa;
+  --shade-50: #71717a;
+  --shade-60: #52525b;
+  --shade-70: #3f3f46;
+  --hairline-light: #e4e4e7;
+  --hairline-dark: #1e2c31;
+  --aloe-10: #c1fbd4;
+  --pistachio-10: #d4f9e0;
+  --link-cool-1: #9dabad;
+  --link-cool-2: #9797a2;
+  --link-cool-3: #bdbdca;
+  --link-mint: #99b3ad;
+
+  /* Shadows */
+  --shadow-level-1: 0 1px 2px rgba(255, 255, 255, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  --shadow-level-2: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 1px 3px rgba(0, 0, 0, 0.3), 0 5px 10px rgba(0, 0, 0, 0.2);
+  --shadow-level-3: 0 8px 8px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.06), 0 2px 2px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(0, 0, 0, 0.06);
+  --shadow-level-4: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-ink: var(--ink);
+  --color-on-primary: var(--on-primary);
+  --color-canvas-night: var(--canvas-night);
+  --color-canvas-night-elevated: var(--canvas-night-elevated);
+  --color-canvas-light: var(--canvas-light);
+  --color-canvas-cream: var(--canvas-cream);
+  --color-surface-elevated-dark: var(--surface-elevated-dark);
+  --color-shade-30: var(--shade-30);
+  --color-shade-40: var(--shade-40);
+  --color-shade-50: var(--shade-50);
+  --color-shade-60: var(--shade-60);
+  --color-shade-70: var(--shade-70);
+  --color-hairline-light: var(--hairline-light);
+  --color-hairline-dark: var(--hairline-dark);
+  --color-aloe-10: var(--aloe-10);
+  --color-pistachio-10: var(--pistachio-10);
+  --color-link-cool-1: var(--link-cool-1);
+  --color-link-cool-2: var(--link-cool-2);
+  --color-link-cool-3: var(--link-cool-3);
+  --color-link-mint: var(--link-mint);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-feature-settings: "ss03" 1;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background-color: var(--canvas-cream);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss03" 1;
+  overflow-x: hidden;
+}
+
+/* Display Typography Utilities adhering strictly to weight 330 & ss03 */
+.font-display-thin {
+  font-family: var(--font-display);
+  font-weight: 300;
+  letter-spacing: 0;
+  font-feature-settings: "ss03" 1;
+}
+
+.font-display-hero {
+  font-family: var(--font-display);
+  font-weight: 300;
+  letter-spacing: 1.8px;
+  line-height: 1.05;
+  font-feature-settings: "ss03" 1;
+}
+
+/* Custom Shadows from design.md */
+.shadow-level-1 {
+  box-shadow: var(--shadow-level-1);
+}
+
+.shadow-level-2 {
+  box-shadow: var(--shadow-level-2);
+}
+
+.shadow-level-3 {
+  box-shadow: var(--shadow-level-3);
+}
+
+.shadow-level-4 {
+  box-shadow: var(--shadow-level-4);
+}
+
+/* Pill buttons rule */
+.btn-pill {
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
